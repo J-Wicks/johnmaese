@@ -1,23 +1,35 @@
 import React from 'react';
+import Paper from 'material-ui/Paper';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
+
+const style = {display: 'inline-block',
+margin: '16px 32px 16px 0',
+width: '300px',
+overflow: 'hidden',}
 
 export default () => (
   <div className="sideNav">
-    <Link to="bio">
-      <p> Bio </p>
-    </Link>
-    <Link to="education">
-      <p> Education </p>
-    </Link>
-    <Link to="blog">
-    <p> Blog </p>
-    </Link>
-    <Link to="contact">
-    <p> Contact </p>
-    </Link>
-    <Link to="admin">
-    <p> Admin </p>
-    </Link>
-</div>
+    <Paper style={style} >
+      <Menu>
+        <Link to="/bio">
+          <MenuItem primaryText="Bio" />
+        </Link>
+        <Link to="/education">
+          <MenuItem primaryText="Education" />
+        </Link>
+        <Link to="/blog">
+          <MenuItem primaryText="Blog" />
+        </Link>
+        <Link to="/contact"> 
+          <MenuItem primaryText="Contact" />
+        </Link>
+        <Link to="/admin">
+          <MenuItem primaryText="Admin" />
+        </Link>
+      </Menu>
+    </Paper>
+  </div>
 )
 
