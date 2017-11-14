@@ -28,7 +28,6 @@ a {
 }
 
 .App {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -99,20 +98,23 @@ a {
   background-color:#46B1C9;
 }
 
-.socialIcon {
-  height: 50px;
-  width: 50px;
-  /* float: right; */
+.socialIcons {
+  margin: 0px;
+  float: right;
 }
+.socialIcons svg {
+  height: 50px;
+}
+
+.socialIcons li{
+  display: inline-block;
+}
+
 .App-header .headerLogo {
   display: inline-block;
   margin: 0 100px;
 }
-.App-header .socialIcons {
-  float: right;
-  margin-right: 100px;
 
-}
 .App-header h1 {
   /* padding: 20px 0 0px 20px; */
   margin: 0;
@@ -129,9 +131,9 @@ a {
   height: 50px;
   padding: 30px;
   color: #2C4251;
-  width: 100%;
   float: left;
   box-shadow: 0px 5px 10px;
+  position: relative;
 }
 
 /*
