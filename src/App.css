@@ -1,49 +1,161 @@
-/* .App {
-  text-align: center;
-} */
-/* 
-a {
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  box-sizing: border-box;
-  display: block;
-} */
+.icon-1 {
+  color: #d94a26;
+  fill: #d94a26; }
+
+.icon-2 {
+  color: #d96e26;
+  fill: #d96e26; }
+
+.icon-3 {
+  color: #d99126;
+  fill: #d99126; }
+
+.icon-4 {
+  color: #d9b526;
+  fill: #d9b526; }
+
+.icon-5 {
+  color: #d9d926;
+  fill: #d9d926; }
+
+.icon-6 {
+  color: #b5d926;
+  fill: #b5d926; }
+
+.icon-7 {
+  color: #91d926;
+  fill: #91d926; }
+
+.icon-8 {
+  color: #6ed926;
+  fill: #6ed926; }
+
+.icon-9 {
+  color: #4ad926;
+  fill: #4ad926; }
+
+.icon-10 {
+  color: #26d926;
+  fill: #26d926; }
+
+.icon-11 {
+  color: #26d94a;
+  fill: #26d94a; }
+
+.icon-12 {
+  color: #26d96e;
+  fill: #26d96e; }
+
+.icon-13 {
+  color: #26d991;
+  fill: #26d991; }
+
+.icon-14 {
+  color: #26d9b5;
+  fill: #26d9b5; }
+
+.icon-15 {
+  color: #26d9d9;
+  fill: #26d9d9; }
+
+.icon-16 {
+  color: #26b5d9;
+  fill: #26b5d9; }
+
+.icon-17 {
+  color: #2691d9;
+  fill: #2691d9; }
+
+.icon-18 {
+  color: #266ed9;
+  fill: #266ed9; }
+
+.icon-19 {
+  color: #264ad9;
+  fill: #264ad9; }
+
+.icon-20 {
+  color: #2626d9;
+  fill: #2626d9; }
+
+.icon-21 {
+  color: #4a26d9;
+  fill: #4a26d9; }
+
+.icon-22 {
+  color: #6e26d9;
+  fill: #6e26d9; }
+
+.icon-23 {
+  color: #9126d9;
+  fill: #9126d9; }
+
+.icon-24 {
+  color: #b526d9;
+  fill: #b526d9; }
+
+.icon-25 {
+  color: #d926d9;
+  fill: #d926d9; }
+
+.icon-26 {
+  color: #d926b5;
+  fill: #d926b5; }
+
+.icon-27 {
+  color: #d92691;
+  fill: #d92691; }
+
+.icon-28 {
+  color: #d9266e;
+  fill: #d9266e; }
+
+.icon-29 {
+  color: #d9264a;
+  fill: #d9264a; }
+
+.icon-30 {
+  color: #d92626;
+  fill: #d92626; }
+
+.soc li:hover {
+  border-radius: 100%;
+  color: #0e1a25;
+  fill: #0e1a25;
+  transform: scale(1.25);
+  transition: background-color .5s, transform .5s ease-out; }
 
 .blogContent {
   resize: none;
   text-align: top;
   height: 40vh;
-  width: 50vw;
-}
-.blogTitle{
+  width: 50vw; }
+
+.blogTitle {
   height: 25px;
   font-size: 16px;
   font-weight: bold;
-  width: 50vw;
-}
+  width: 50vw; }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  height: 80px; }
 
 .App {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
+
 .appBody {
-  margin: 75px 0px 0px 130px;
-}
+  margin: 75px 0px 0px 130px; }
 
 .content {
   height: 70vh;
   flex-grow: 1;
   width: 60vw;
   display: inline-block;
-  overflow: scroll
-}
+  overflow: scroll; }
 
-.contentHeader{
+.contentHeader {
   border-radius: 5px;
   box-shadow: 2px 2px 10px black;
   background-color: #46B1C9;
@@ -51,80 +163,112 @@ a {
   overflow: hidden;
   height: 300px;
   width: 50vw;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
 .sectionTitle {
   margin-top: 50px;
   width: 45vw;
-  border-bottom: 1px solid black;
-
-} 
+  border-bottom: 1px solid black; }
 
 .bio {
-  width: 45vw;
-}
-.contentHeader img{
+  width: 45vw; }
+
+.contentHeader img {
   height: 300px;
   width: auto;
-  float: left;
-}
+  float: left; }
 
-.contentHeader h1{
-  height: 100%;
-  margin-top: 100px;
-  margin-left: 1vw;
+.contentHeader h1 {
+  margin: 100px 0 0 1vw;
   display: inline-block;
-  text-align: center;
-  float: left;
-}
+  text-align: center; }
 
+.contentHeader h2 {
+  margin: 0 0 0 0;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 1vw; }
 
 .sideNav {
-  float:left;
+  float: left;
   width: 25vw;
+  display: inline-block; }
+
+.sideNav a {
+  text-decoration: none; }
+
+.sideNav button {
+  font-size: 14px;
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.38);
+  margin: 1px 0 0 0; }
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
   display: inline-block;
-}
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
 
-.sideNav a{
-  text-decoration: none;
-}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #46B1C9;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
 
-.sideNav p {
-  margin: 10px;
-  height: 30px;
-  width: 75%;
-  box-shadow: 5px 5px 5px #2C4251;
-  background-color:#46B1C9;
-}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white; }
+
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 .socialIcons {
   margin: 0px;
-  float: right;
-}
-.socialIcons svg {
-  height: 50px;
-}
+  float: right; }
 
-.socialIcons li{
-  display: inline-block;
-}
+.socialIcons svg {
+  height: 50px; }
+
+.socialIcons li {
+  display: inline-block; }
 
 .App-header .headerLogo {
   display: inline-block;
-  margin: 0 100px;
-}
+  margin: 0 100px; }
 
 .App-header h1 {
   /* padding: 20px 0 0px 20px; */
-  margin: 0;
-}
+  margin: 0; }
 
 .App-header h2 {
   margin: 0px;
   font-size: 14px;
-  /* padding-left: 20px; */
-}
+  /* padding-left: 20px; */ }
 
 .App-header {
   background-color: #FFFFFF;
@@ -133,8 +277,7 @@ a {
   color: #2C4251;
   float: left;
   box-shadow: 0px 5px 10px;
-  position: relative;
-}
+  position: relative; }
 
 /*
 .App-title {
@@ -146,6 +289,7 @@ a {
 }
 */
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

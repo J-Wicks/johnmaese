@@ -4,32 +4,31 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
 
-const style = {display: 'inline-block',
-margin: '16px 32px 16px 0',
-width: '300px',
-overflow: 'hidden',}
+
 
 export default () => (
   <div className="sideNav">
-    <Paper style={style} >
-      <Menu>
         <Link to="/bio">
-          <MenuItem primaryText="Bio" />
+          <button className="hvr-sweep-to-right"> Bio </button>
         </Link>
         <Link to="/education">
-          <MenuItem primaryText="Education" />
+          <button className="hvr-sweep-to-right"> Education </button>
         </Link>
         <Link to="/blog">
-          <MenuItem primaryText="Blog" />
+          <button className="hvr-sweep-to-right"> Blog </button>
         </Link>
         <Link to="/contact"> 
-          <MenuItem primaryText="Contact" />
+          <button className="hvr-sweep-to-right"> Contact </button>
         </Link>
         <Link to="/admin">
-          <MenuItem primaryText="Admin" />
+          <button className="hvr-sweep-to-right"> Admin </button>
         </Link>
-      </Menu>
-    </Paper>
+        <Link to="/articles">
+          <button className="hvr-sweep-to-right"> Articles </button>
+        </Link>
+        <Link to="/awards">
+          <button className="hvr-sweep-to-right"> Awards </button>
+        </Link>
   </div>
 )
 
