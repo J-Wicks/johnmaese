@@ -1,5 +1,7 @@
 $background: hsl(210, 45, 10);
 
+$sitebg:#FCF7F9;
+
 @for $i from 1 through 30 {
   .icon-#{$i} {
     color: hsl($i * 12, 70, 50); // IE8
@@ -7,6 +9,14 @@ $background: hsl(210, 45, 10);
   }
 }
 
+* {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.App {
+  background-color: $sitebg;
+}
 
 .soc li:hover {
   border-radius: 100%;
@@ -46,7 +56,8 @@ $background: hsl(210, 45, 10);
   flex-grow: 1;
   width: 60vw;
   display: inline-block;
-  overflow: scroll
+  overflow: scroll;
+  
 }
 
 .contentHeader{
@@ -131,7 +142,7 @@ margin: 1px 0 0 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: #46B1C9;
+
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -159,8 +170,21 @@ margin: 1px 0 0 0;
   height: 50px;
 }
 
+.contactLink{
+  display: inline-block;
+}
 .socialIcons li{
   display: inline-block;
+}
+#contact svg {
+  height: 50px;
+  width: auto;
+  display: inline-block;
+}
+#contact div {
+  width: 100%;
+  align-content: center;
+  display: block;
 }
 
 .App-header .headerLogo {
@@ -180,7 +204,8 @@ margin: 1px 0 0 0;
 }
 
 .App-header {
-  background-color: #FFFFFF;
+  overflow: hidden;
+  background-color: #FCFCF6;
   height: 50px;
   padding: 30px;
   color: #2C4251;
@@ -189,15 +214,12 @@ margin: 1px 0 0 0;
   position: relative;
 }
 
-/*
-.App-title {
-  font-size: 1.5em;
+@for $i from 1 through 7 {
+  .nav-icon-#{$i}:before {
+    background-color: hsl($i * 12 + 150, 70, 50); 
+  }
 }
 
-.App-intro {
-  font-size: large;
-}
-*/
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -118,6 +118,12 @@
   color: #d92626;
   fill: #d92626; }
 
+* {
+  font-family: 'Open Sans', sans-serif; }
+
+.App {
+  background-color: #FCF7F9; }
+
 .soc li:hover {
   border-radius: 100%;
   color: #0e1a25;
@@ -228,7 +234,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #46B1C9;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -254,8 +259,21 @@
 .socialIcons svg {
   height: 50px; }
 
+.contactLink {
+  display: inline-block; }
+
 .socialIcons li {
   display: inline-block; }
+
+#contact svg {
+  height: 50px;
+  width: auto;
+  display: inline-block; }
+
+#contact div {
+  width: 100%;
+  align-content: center;
+  display: block; }
 
 .App-header .headerLogo {
   display: inline-block;
@@ -271,7 +289,8 @@
   /* padding-left: 20px; */ }
 
 .App-header {
-  background-color: #FFFFFF;
+  overflow: hidden;
+  background-color: #FCFCF6;
   height: 50px;
   padding: 30px;
   color: #2C4251;
@@ -279,15 +298,27 @@
   box-shadow: 0px 5px 10px;
   position: relative; }
 
-/*
-.App-title {
-  font-size: 1.5em;
-}
+.nav-icon-1:before {
+  background-color: #26d9a3; }
 
-.App-intro {
-  font-size: large;
-}
-*/
+.nav-icon-2:before {
+  background-color: #26d9c7; }
+
+.nav-icon-3:before {
+  background-color: #26c7d9; }
+
+.nav-icon-4:before {
+  background-color: #26a3d9; }
+
+.nav-icon-5:before {
+  background-color: #2680d9; }
+
+.nav-icon-6:before {
+  background-color: #265cd9; }
+
+.nav-icon-7:before {
+  background-color: #2638d9; }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }
