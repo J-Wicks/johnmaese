@@ -1,7 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
 
-export default () => (
-  <div>
-    <p>This is the blog page</p>
-  </div>
-)
+import BlogPost from './BlogPost';
+
+export default class Blog extends Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: [],
+    }
+  }
+
+  componentDidMount () {
+    axios.get('/api/blog')
+    .then(blogPosts => {
+      this.setState({posts: blogPosts.data})
+    });
+  }
+
+  render () {
+    return (
+      <div>
+        {
+            this.state.posts.map(post => (
+              <BlogPost post={post} />
+            )
+            )
+        }
+    </div>
+    )
+  }
+}

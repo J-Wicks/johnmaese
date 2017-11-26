@@ -1,13 +1,13 @@
 import React from 'react';
-import faker from 'faker';
 
-const paragraphs = faker.lorem.paragraphs(20);
+// const john = require('../john.jpg');
+// console.log(john);
 
 // The bio on this page is cited from https://www.max.md/biographies.html
 export default () => (
   <div>
     <div className="contentHeader">
-      <img src={require('../john.jpg')} />
+      <img src="./files/john.jpg"/>
       <h1> John R. Maese, MD </h1>
       <h2> General Practice, Internal Medicine - Geriatrics </h2>
     </div>

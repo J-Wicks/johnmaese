@@ -11,31 +11,29 @@ import Blog from './Components/Blog';
 import Contact from './Components/Contact';
 import Awards from './Components/Awards';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-
-          <Header />
-          <Router>
-          <div className="appBody">
-
-            <Sidenav />
-              <div className="content">
-                  <Switch>
-                    <Route exact path='/' component={Bio} />
-                    <Route path='/bio' component={Bio} />
-                    <Route path='/admin' component={Admin} />
-                    <Route path='/education' component={Education} />
-                    <Route path='/blog' component={Blog} />
-                    <Route path='/contact' component={Contact} />
-                    <Route path='/awards' component={Awards} />
-                  </Switch>              
-              </div>
-            </div> 
-          </Router>
+        <Header />
+        <Router>
+        <div className="appBody">
+          <Sidenav />
+            <div className="content">
+                <Switch>
+                  <Route exact path='/' component={Bio} />
+                  <Route path='/bio' component={Bio} />
+                  <Route path='/admin' component={Admin} />
+                  <Route path='/education' component={Education} />
+                  <Route path='/blog' component={Blog} />
+                  <Route path='/contact' component={Contact} />
+                  <Route path='/awards' component={Awards} />
+                </Switch>              
+            </div>
+          </div> 
+        </Router>
       </div>
     );
   }
