@@ -5,7 +5,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
 import Sidenav from './Components/Sidenav';
 import Bio from './Components/Bio';
-import Admin from './Admin';
+import Admin from './Components/Admin';
 import Education from './Components/Education';
 import Blog from './Components/Blog';
 import Contact from './Components/Contact';
