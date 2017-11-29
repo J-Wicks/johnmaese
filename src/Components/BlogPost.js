@@ -10,12 +10,12 @@ export default (props) => {
         <div className="abbrevCircle">
           <p> {authorAbbrev} </p>
         </div>
-        <p> {author} </p>
-        <p> {createdAtDate.toDateString()} </p>   
+        <p className="blogAuthor"> {author} </p>
+        <p className="blogCreatedAt"> {createdAtDate.toDateString()} </p>   
       </div>        
       <p className="blogTitle"> {title} </p>
 
-      <p> {content} </p>
+      <p className="blogContentEntry"> {content} </p>
     </div>
   )
 }

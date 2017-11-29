@@ -14,7 +14,10 @@ export default class Blog extends Component {
   componentDidMount () {
     axios.get('/api/blog')
     .then(blogPosts => {
-      this.setState({posts: blogPosts.data})
+      const sortedBlogPosts = blogPosts.data.sort((blogA,blogB) => {
+        return new Date(blogB.createdAt) - new Date(blogA.createdAt);
+      })
+      this.setState({posts: sortedBlogPosts})
     });
   }
 
@@ -23,7 +26,7 @@ export default class Blog extends Component {
       <div>
         {
             this.state.posts.map(post => (
-              <BlogPost post={post} />
+              <BlogPost post={post} key={post.id}/>
             )
             )
         }
