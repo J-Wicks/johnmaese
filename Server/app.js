@@ -1,13 +1,31 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const session = require('express-session');
+const passport = require('passport');
 
 const db = require('./db');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const dbStore = new SequelizeStore({ db });
+
 const app = express();
-const blogPosts = require('./models.js');
+const blogPosts = require('./models/blogPosts.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+dbStore.sync();
+
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'an insecure secret',
+  store: dbStore,
+  resave: false,
+  saveUninitialized: false,
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/files', express.static(path.join(__dirname, '../public')));
 
