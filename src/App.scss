@@ -223,7 +223,17 @@ margin: 1px 0 0 0;
   align-content: center;
   display: block;
 }
-
+.newBlog ul {
+  padding: 0px;
+  margin: 0 0 0 0;
+}
+.newBlog li {
+  display: inline-block;
+  height: 50px;
+}
+.newBlog svg {
+  height: 20px;
+}
 .App-header .headerLogo {
   display: inline-block;
   margin: 0 100px;
@@ -277,4 +287,15 @@ margin: 1px 0 0 0;
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#smShareButtons .active svg{
+  fill: limegreen;
+}
+
+#smShareButtons .inactive svg{
+  fill: lightgray;
+}
+.smShare {
+  height: 25px;
 }
