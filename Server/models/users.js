@@ -1,12 +1,13 @@
-const db = require('./db');
+const db = require('../db');
 const Sequelize = require('sequelize');
 const _ = require('lodash');
 const crypto = require('crypto');
 
 const setSaltAndPassword = (user) => {
+  console.log('**user**', user);
   if (user.changed('password')) {
-    user.salt = user.Model.generateSalt();
-    user.password = user.Model.encryptPassword(user.password, user.salt);
+    user.salt = user.constructor.generateSalt();
+    user.password = user.constructor.encryptPassword(user.password, user.salt);
   }
 };
 
@@ -35,7 +36,7 @@ User.prototype.sanitize = function () {
   return _.omit(this.toJSON(), ['password', 'salt']);
 };
 
-User.prototype.correctPassword = function () {
+User.prototype.correctPassword = function (candidatePassword) {
   return this.Model.encryptPasword(candidatePassword, this.salt) === this.password;
 };
 

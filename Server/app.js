@@ -11,7 +11,7 @@ const dbStore = new SequelizeStore({ db });
 
 const app = express();
 const blogPosts = require('./models/blogPosts.js');
-
+const Users = require('./models/users');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -28,6 +28,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/files', express.static(path.join(__dirname, '../public')));
+
+app.use('/login', require('./login'));
 
 app.post('/api/blog', (req, res) => {
   blogPosts.create({
