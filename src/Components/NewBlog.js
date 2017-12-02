@@ -18,6 +18,6 @@ export default (props) => (
     </ul>
     <textarea className="blogContent" name='blogContent' onChange={props.handleType} value={props.content}> 
     </textarea>
-    <button onClick={this.handleSubmit}> Post! </button>
+    <button onClick={props.handleSubmit}> Post! </button>
   </div>
 )

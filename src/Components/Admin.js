@@ -50,6 +50,7 @@ export default class AdminBlogPost extends Component {
   }
 
   handleType(event) {
+    console.log(event.target.name)
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -81,7 +82,7 @@ export default class AdminBlogPost extends Component {
     };
 
     function AdminView(props) {
-      const loggedIn = props.user;
+      const loggedIn = true;
       if (loggedIn) {
         return (<NewBlog {...props}/>)
       }
@@ -90,6 +91,7 @@ export default class AdminBlogPost extends Component {
         password={props.userPassword}
         handlePassword={props.handlePassword}
         handleUsername={props.handleUsername}
+        handleType={props.handleType}
       />);
     };
     return (

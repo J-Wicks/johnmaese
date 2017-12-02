@@ -42,6 +42,13 @@ app.post('/api/blog', (req, res) => {
     });
 });
 
+app.get('/api/blog/:blogId', (req, res) => {
+  blogPosts.findById(req.params.blogId)
+    .then((foundPost) => {
+      res.send(foundPost);
+    })
+});
+
 app.get('/api/blog', (req, res) => {
   blogPosts.findAll()
     .then((posts) => {

@@ -299,3 +299,52 @@ margin: 1px 0 0 0;
 .smShare {
   height: 25px;
 }
+
+#awards img {
+  height: 100%;
+  float: left;
+  width: 15%;
+  vertical-align: middle
+}
+
+.awardInfo {
+  margin-bottom: 15px;
+  width: 85%;
+  display: inline-block;
+}
+
+#awards .name {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0px;
+}
+
+#awards .org {
+  font-size: 16px;
+  color: gray;
+}
+
+.article {
+  width: 45%;
+  border: 1px solid gray;
+  display: inline-block;
+  overflow: hidden;
+  height: 300px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.article img{
+  width: 100%;
+  display: block;
+  height: 50%;
+  border-bottom: 1px solid black;
+}
+
+.article p {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  padding: 10px
+}

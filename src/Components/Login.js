@@ -1,22 +1,21 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
+
 
 export default (props) => (
   <div>
-    <TextField
-      onChange={props.handleUsername}
-      hintText="Admin E-Mail"
-      floatingLabelText="E-Mail"
+    <input
+      type="text"
+      name="userEmail"
+      onChange={props.handleType}
       value={props.username}
-
+      key="email"
     /><br />
-    <TextField
-      disableAutoFocus={true}
-      onChange={props.handlePassword}
-      hintText="Password"
-      floatingLabelText="Password"
-      type="password"
+    <input
+      type="text"
+      name="password"
+      onChange={props.handleType}
       value={props.password}
+      key="password"
     />
     <button> Continue </button>
   </div>

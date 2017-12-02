@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-  const { author, title, content, createdAt } = props.post;
+  const { id, author, title, content, createdAt } = props.post;
   const authorAbbrev = author.split(' ')[0][0] + author.split(' ')[1][0];
   const createdAtDate = new Date(createdAt);
   return(
