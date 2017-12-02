@@ -32,7 +32,8 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "webpack -w & nodemon Server/app.js",
+    "start": "node Server/app.js",
+    "start-dev": "webpack -w & nodemon Server/app.js",
     "build": "webpack -w",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
