@@ -26,9 +26,6 @@ export default () => (
         <Link to="/awards">
           <button className="hvr-sweep-to-right nav-icon-6"> Awards </button>
         </Link>
-        <Link to="/admin">
-          <button className="hvr-sweep-to-right nav-icon-7"> Admin </button>
-        </Link>
   </div>
 )
 

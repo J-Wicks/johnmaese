@@ -12,6 +12,7 @@ const dbStore = new SequelizeStore({ db });
 const app = express();
 const blogPosts = require('./models/blogPosts.js');
 const Users = require('./models/users');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -26,6 +27,22 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.serializeUser((user, done) => {
+  try {
+    done(null, user.id);
+  } catch (err) {
+    done(err);
+  }
+});
+
+passport.deserializeUser((id, done) => {
+  Users.findById(id)
+    .then(user => {
+      done(null, user);
+    })
+    .catch(done);
+});
 
 app.use('/files', express.static(path.join(__dirname, '../public')));
 

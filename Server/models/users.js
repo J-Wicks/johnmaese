@@ -4,7 +4,6 @@ const _ = require('lodash');
 const crypto = require('crypto');
 
 const setSaltAndPassword = (user) => {
-  console.log('**user**', user);
   if (user.changed('password')) {
     user.salt = user.constructor.generateSalt();
     user.password = user.constructor.encryptPassword(user.password, user.salt);
@@ -37,7 +36,7 @@ User.prototype.sanitize = function () {
 };
 
 User.prototype.correctPassword = function (candidatePassword) {
-  return this.Model.encryptPasword(candidatePassword, this.salt) === this.password;
+  return this.constructor.encryptPassword(candidatePassword, this.salt) === this.password;
 };
 
 User.generateSalt = function () {
@@ -45,6 +44,7 @@ User.generateSalt = function () {
 };
 
 User.encryptPassword = function (plainText, salt) {
+  console.log('**plaintext', plainText, '**salt**', salt);
   const hash = crypto.createHash('sha1');
   hash.update(plainText);
   hash.update(salt);
